@@ -37,12 +37,13 @@ async def arena_status() -> str:
 
 
 @server.tool()
-async def arena_direct_chat(prompt: str) -> str:
+async def arena_direct_chat(prompt: str, model: str = "") -> str:
     """
-    Submits a prompt to LMArena (arena.ai/direct) via the live Chrome tab
+    Submits a prompt to LMArena (arena.ai/chat) via the live Chrome tab
     and retrieves the model's response.
+    Optional model parameter: e.g. "gemini-4-argon-high", "claude-sonnet", "gpt-6".
     """
-    return await cdp_client.send_direct_prompt(prompt)
+    return await cdp_client.send_direct_prompt(prompt, model=model if model else None)
 
 
 @server.tool()
