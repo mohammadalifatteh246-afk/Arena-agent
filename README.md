@@ -69,6 +69,21 @@ Arena-agent/
 
 ---
 
+## ✅ Testing
+
+Install the dependencies and run the suite:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python -m pytest -v
+```
+
+The suite covers the Chrome CDP relay (`tests/test_cdp_relay.py`) and the Antigravity → Arena dispatch protocol (`tests/test_dispatch_protocol.py`), including a check that `.agent/CURRENT_TASK.md` conforms to the work-order format.
+
+---
+
 ## 🛠️ Setup Instructions
 
 ### 1. Launch Chrome with Remote Debugging
