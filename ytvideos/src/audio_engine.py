@@ -66,7 +66,7 @@ class ProceduralAudioEngine:
             t = i / self.sample_rate
             decay = math.exp(-35.0 * t)
             val = math.sin(2 * math.pi * 1800.0 * t) * decay
-            clamped = max(-32767, min(32767, int(val * 30000)))
+            clamped = max(-32767, min(32767, int(val * 28000)))
             samples.append(clamped)
         return struct.pack(f"<{len(samples)}h", *samples)
 

@@ -99,12 +99,28 @@ class DailyYouTubeAutomationJob:
 
         # 3. Ready for Verification
         print("  ✅ Video creatively edited and ready for user verification!")
-        print(f"  👉 Review player: C:\\Users\\Admin\\.gemini\\antigravity\\brain\\6ec269d5-459c-434b-a3a2-2dd1ba17bc3e\\video_player.html")
+        print(f"  👉 Review player: C:\\Users\\Admin\\.gemini\\antigravity\\brain\\f9d3bb7a-340b-4e4c-b876-b878a65ec057\\video_player.html")
 
     def dispatch_next_pipeline_task(self):
         """Generates the next task work-order in Hinglish with Indian Deep Voice and pushes to GitHub."""
         print("\n[Step 3] Preparing Next Video Task (Strict Hinglish + Indian Deep-Voice Male)...")
-        next_item = CONTENT_PIPELINE[0]  # Or cycled index
+        
+        # Load or initialize pipeline state
+        state_file = self.workspace_root / "pipeline_state.json"
+        state = {"current_index": 0}
+        if state_file.exists():
+            try:
+                state = json.loads(state_file.read_text(encoding="utf-8"))
+            except Exception:
+                pass
+        
+        # Advance to next item in pipeline
+        next_idx = (state.get("current_index", 0) + 1) % len(CONTENT_PIPELINE)
+        next_item = CONTENT_PIPELINE[next_idx]
+        state["current_index"] = next_idx
+        state["last_dispatched_topic"] = next_item["topic"]
+        state["last_dispatched_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        state_file.write_text(json.dumps(state, indent=2), encoding="utf-8")
         
         dispatches_dir = self.workspace_root / "dispatches"
         dispatches_dir.mkdir(parents=True, exist_ok=True)
@@ -122,7 +138,7 @@ class DailyYouTubeAutomationJob:
         audio_order = f"""# Arena Session 2: Voiceover Narration for '{next_item['topic']}'
 - Voice Persona: Indian Deep-Voice Male (Baritone, dramatic, commanding cadence)
 - Language: 100% Hinglish (Natural Indian Dev dialogue)
-- Script Reference: ytvideos/scripts/api_backend_hinglish_script.md
+- Script Reference: ytvideos/scripts/{next_item['script_file']}
 - Audio Standard: -14.0 LUFS Integrated / -1.0 dBTP True Peak
 - Invariants: Include natural breath pauses [breath] and <break time="300ms"/>
 """
