@@ -1,0 +1,95 @@
+{
+  "production_title": "How The Internet ACTUALLY Works: APIs & Backends Explained",
+  "project_slug": "api_backend_masterclass",
+  "video_configuration": {
+    "target_fps": 24,
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "duration_seconds": 60.0,
+    "compression_mode": "lossless_webp_and_deflate_level_9",
+    "zero_quality_loss_verified": true
+  },
+  "audio_mastering_specification": {
+    "standard": "ITU-R BS.1770-4 / EBU R128",
+    "target_integrated_lufs": -14.0,
+    "max_true_peak_dbtp": -1.0,
+    "dialogue_ducking_db": -6.0,
+    "procedural_sound_engine": "Python wave/math (0% copyright risk)"
+  },
+  "arena_agent_dual_sessions": {
+    "session_1_images": {
+      "branch": "arena/ytvideo-api-backend-images",
+      "work_order_file": "ytvideos/dispatches/TASK_IMAGES.md",
+      "status": "DISPATCHED",
+      "scope": "24 FPS Scene Illustrations & Lossless Compression"
+    },
+    "session_2_audio": {
+      "branch": "arena/ytvideo-api-backend-audio",
+      "work_order_file": "ytvideos/dispatches/TASK_AUDIO.md",
+      "status": "DISPATCHED",
+      "scope": "Humanized Voiceover Narration with SSML & -14 LUFS Mastering"
+    }
+  },
+  "scenes": [
+    {
+      "scene_id": 1,
+      "name": "The Invisible Messenger",
+      "timecode": "[0:00 - 0:08]",
+      "art_style": "sumi_dark",
+      "fps": 24,
+      "assets": {
+        "master_png": "ytvideos/assets/images/api_backend_scene_01.png",
+        "lossless_webp": "ytvideos/assets/images/api_backend_scene_01.webp",
+        "vector_svg": "ytvideos/assets/svg_frames/api_backend_24fps_scene_01.svg",
+        "audio_sfx": "ytvideos/assets/audio/api_backend_hook_whoosh.wav"
+      }
+    },
+    {
+      "scene_id": 2,
+      "name": "Frontend Dining Room vs Backend Kitchen",
+      "timecode": "[0:08 - 0:24]",
+      "art_style": "sumi_original",
+      "fps": 24,
+      "assets": {
+        "master_png": "ytvideos/assets/images/api_backend_scene_02.png",
+        "lossless_webp": "ytvideos/assets/images/api_backend_scene_02.webp",
+        "vector_svg": "ytvideos/assets/svg_frames/api_backend_24fps_scene_02.svg",
+        "audio_sfx": "ytvideos/assets/audio/api_backend_kitchen_drone.wav"
+      }
+    },
+    {
+      "scene_id": 3,
+      "name": "Which Protocol Where? REST vs WebSockets",
+      "timecode": "[0:24 - 0:44]",
+      "art_style": "svg_code",
+      "fps": 24,
+      "assets": {
+        "master_png": "ytvideos/assets/images/api_backend_scene_03.png",
+        "lossless_webp": "ytvideos/assets/images/api_backend_scene_03.webp",
+        "vector_svg": "ytvideos/assets/svg_frames/api_backend_24fps_scene_03.svg",
+        "audio_sfx": "ytvideos/assets/audio/api_backend_protocols_click.wav"
+      }
+    },
+    {
+      "scene_id": 4,
+      "name": "The Intelligent Global Engine & Payoff Loop",
+      "timecode": "[0:44 - 1:00]",
+      "art_style": "sumi_dark_to_original",
+      "fps": 24,
+      "assets": {
+        "master_png": "ytvideos/assets/images/api_backend_scene_04.png",
+        "lossless_webp": "ytvideos/assets/images/api_backend_scene_04.webp",
+        "vector_svg": "ytvideos/assets/svg_frames/api_backend_24fps_scene_04.svg",
+        "audio_sfx": "ytvideos/assets/audio/api_backend_engine_drone.wav"
+      }
+    }
+  ],
+  "youtube_metadata": {
+    "title": "How the Internet ACTUALLY Works in 60 Seconds: APIs & Backends ⚡",
+    "description": "Ever wondered what really happens when you click 'Order Food' on your phone? Here is how APIs and backends connect the global web in 40 milliseconds.\n\n🎨 Visuals: 24 FPS BeyondSumi Vector & Anime Engine\n🎙️ Audio: Procedural -14 LUFS Sound Design\n🤖 Automation: Antigravity + LMArena Dual-Agent Engine\n\n#API #Backend #WebDev #Coding #SoftwareEngineering #BeyondSumi",
+    "tags": ["API", "Backend", "Web Development", "Software Engineering", "FullStack", "BeyondSumi"],
+    "category": "Science & Technology"
+  }
+}
