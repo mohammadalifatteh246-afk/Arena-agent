@@ -1,0 +1,37 @@
+{
+  "project_name": "ytvideos",
+  "version": "1.0.0",
+  "description": "YouTube Automation Engine powered by BeyondSumi Framework & LMArena Agent Mode",
+  "video_settings": {
+    "target_fps": 16,
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "default_style": "sumi_original",
+    "supported_styles": [
+      "sumi_original",
+      "sumi_light",
+      "sumi_dark",
+      "svg_code"
+    ]
+  },
+  "generation_providers": {
+    "image_generation": {
+      "primary": "lmarena_agent_mode",
+      "fallback": "code_driven_svg",
+      "cost": "zero_cost"
+    },
+    "audio_generation": {
+      "narration": "lmarena_agent_mode",
+      "narration_fallbacks": ["elevenlabs_api", "local_voicebox", "user_mic"],
+      "background_sound": "algorithmic_python_engine",
+      "cost": "zero_cost"
+    }
+  },
+  "lmarena_connector": {
+    "repo_path": "D:/Arena-agent",
+    "dispatch_branch_prefix": "arena/ytvideo-",
+    "task_file": ".agent/CURRENT_TASK.md"
+  }
+}

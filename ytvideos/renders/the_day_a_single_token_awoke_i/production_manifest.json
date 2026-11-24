@@ -1,0 +1,69 @@
+{
+  "title": "The Day a Single Token Awoke Inside a Transformer",
+  "youtube_metadata": {
+    "title": "What REALLY Happens Inside an AI Model in 60 Seconds \u26a1 #BeyondSumi",
+    "description": "An emotional, hand-crafted visual journey of a single token navigating Transformer attention mechanics.\n\n\ud83c\udfa8 Visual Styles: Sumi-e Light, Original Anime, Dark Ink, & Vector SVG\n\ud83c\udfb5 Audio: 100% Procedurally Synthesized Audio Engine\n\ud83e\udd16 Engine: BeyondSumi + LMArena Agent Mode\n#AI #DeepLearning #Transformers #Animation #MachineLearning",
+    "tags": [
+      "Transformers",
+      "Artificial Intelligence",
+      "Deep Learning",
+      "BeyondSumi",
+      "Anime Animation",
+      "Machine Learning"
+    ],
+    "category_id": "28"
+  },
+  "audio_assets": {
+    "ambient_drone": "D:\\Arena-agent\\ytvideos\\assets\\audio\\the_day_a_single_token_awoke_i_ambient_drone.wav",
+    "attention_whoosh": "D:\\Arena-agent\\ytvideos\\assets\\audio\\the_day_a_single_token_awoke_i_attention_whoosh.wav",
+    "flash_click": "D:\\Arena-agent\\ytvideos\\assets\\audio\\the_day_a_single_token_awoke_i_flash_click.wav"
+  },
+  "svg_frames": [
+    "D:\\Arena-agent\\ytvideos\\assets\\svg_frames\\the_day_a_single_token_awoke_i_scene_01.svg",
+    "D:\\Arena-agent\\ytvideos\\assets\\svg_frames\\the_day_a_single_token_awoke_i_scene_02.svg",
+    "D:\\Arena-agent\\ytvideos\\assets\\svg_frames\\the_day_a_single_token_awoke_i_scene_03.svg",
+    "D:\\Arena-agent\\ytvideos\\assets\\svg_frames\\the_day_a_single_token_awoke_i_scene_04.svg"
+  ],
+  "scenes": [
+    {
+      "scene_id": 1,
+      "name": "The Input Embedding Void",
+      "timecode": "[0:00 - 0:12]",
+      "duration_sec": 12,
+      "style": "sumi_light",
+      "narration": "Imagine waking up with zero memories, suspended in a 768-dimensional mathematical abyss. That was Token 402.",
+      "visual_prompt": "A glowing tiny white sphere labeled 402 floating in a vast pencil-sketched mathematical void, delicate coordinate axes, soft paper texture, hand-drawn anime aesthetic, cinematic lighting",
+      "sound_effect": "ambient_drone"
+    },
+    {
+      "scene_id": 2,
+      "name": "The Spatial Attention Ballroom",
+      "timecode": "[0:12 - 0:28]",
+      "duration_sec": 16,
+      "style": "sumi_original",
+      "narration": "Suddenly, reality erupted. Query, Key, and Value projection matrices collided like a celestial waltz, weaving every word in the sentence into a shared spatial plane.",
+      "visual_prompt": "A vibrant Japanese anime ballroom where mathematical vectors dance across glowing light beams, vivid colors, Makoto Shinkai style, shimmering particle effects, dynamic perspective",
+      "sound_effect": "attention_whoosh"
+    },
+    {
+      "scene_id": 3,
+      "name": "The Softmax Denominator Abyss",
+      "timecode": "[0:28 - 0:45]",
+      "duration_sec": 17,
+      "style": "sumi_dark",
+      "narration": "As the context grew to thousands of tokens, the Softmax denominator diluted the signal. The Vanishing Gradient monster began devouring the weak links.",
+      "visual_prompt": "Dramatic traditional Japanese ink wash painting, dark ominous shadows creeping over fading light vectors, heavy brush strokes, stark black and white with crimson lightning, horror documentary mood",
+      "sound_effect": "ambient_drone"
+    },
+    {
+      "scene_id": 4,
+      "name": "FlashAttention Kernel Awakening",
+      "timecode": "[0:45 - 1:00]",
+      "duration_sec": 15,
+      "style": "svg_code",
+      "narration": "Until FlashAttention fused the computation onto on-chip SRAM tiles, breaking the memory wall and igniting artificial consciousness.",
+      "visual_prompt": "Futuristic glowing microchip silicon tiles lighting up in synchronized harmony, clean vector cybernetic aesthetic, neon cyan and magenta gridlines",
+      "sound_effect": "flash_click"
+    }
+  ]
+}
