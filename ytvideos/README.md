@@ -37,9 +37,12 @@
 ytvideos/
 ├── pipeline_config.json      # Video resolution, frame rates, and generation provider rules
 ├── generate_video.py         # Main entrypoint to generate a full video production package
+├── references/
+│   └── 24FPS_BATCH_FORMULA.md # Official mathematical specification for 24 FPS image batching
 ├── src/
 │   ├── __init__.py
 │   ├── arena_bridge.py       # Interfaces with LMArena Agent Mode via GitHub Shared Bus
+│   ├── batch_calculator.py   # Dynamic 24 FPS frame & micro-batch calculator (4 batches/sec)
 │   ├── story_engine.py       # High-retention scriptwriting engine (Story > Graphics)
 │   ├── visual_engine.py      # BeyondSumi art prompt generator & SVG vector frame renderer
 │   ├── audio_engine.py       # Algorithmic Python audio synthesizer (Zero-cost, royalty-free)
@@ -74,4 +77,21 @@ python D:/Arena-agent/ytvideos/generate_video.py
 ### Full Cloud Dispatch (Pushes work order to GitHub for Arena Cloud Agent):
 ```bash
 python D:/Arena-agent/ytvideos/generate_video.py --push
+```
+
+---
+
+## 📐 24 FPS Frame & Micro-Batching Standard
+
+To respect Arena's $\le 10$ image batch ceiling while maintaining cinematic 24 FPS smoothness:
+- **Total Frames:** $T_{\text{frames}} = 24 \times S$
+- **Total Micro-Batches:** $N_{\text{batches}} = 4 \times S$ (at 6 images per batch)
+- **Batch Duration:** 250 ms per batch ($0.25\text{s}$)
+- **Frame Duration:** 41.67 ms per frame ($\approx 0.04167\text{s}$)
+
+See detailed specification in [`references/24FPS_BATCH_FORMULA.md`](references/24FPS_BATCH_FORMULA.md).
+
+```bash
+# Calculate frames, micro-batches, and storage for any duration (e.g. 90 seconds):
+python ytvideos/src/batch_calculator.py --seconds 90
 ```
